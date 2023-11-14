@@ -1,0 +1,36 @@
+#quote-box
+    width: 100%
+    max-width: 550px
+    display: flex
+    flex-direction: column
+    font-family: 'Raleway', sans-serif
+    gap: 1rem
+    #author
+        align-self: flex-end
+        &::before
+            content:  "-"
+            margin-right: 1rem
+    #text
+        font-size: 1.5rem
+        text-align: justify
+    .social-media-and-button-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .social-media
+            display: flex
+            gap: 1rem
+            .social-media-button
+                width: 40px
+                height: 38px
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 1.5rem
+        #new-quote
+            padding: 1rem
+            height: 38px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 5px
