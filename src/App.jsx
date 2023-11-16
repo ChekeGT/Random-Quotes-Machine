@@ -1,10 +1,10 @@
 import ThemeProvider from "./components/ThemeProvider"
 import Quoteblock from "./components/QuoteBlock"
 
-function App() {
+function App() {  
   return (
     <ThemeProvider>
-      <Quoteblock/>
+        <Quoteblock/>
     </ThemeProvider>
     )
 }

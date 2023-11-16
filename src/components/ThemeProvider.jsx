@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
+import "./sass/ThemeProvider.sass"
+
 const ThemeContext = createContext()
 const updateThemeContext = createContext()
 
@@ -15,7 +17,7 @@ export function useThemeContext(){
 
 
 export default function ThemeProvider({ children }){   
-    const themes =  ['purple', 'brown', 'orange', 'aquamarine',]
+    const themes =  ['purple', 'brown', 'orange', 'aquamarine', 'green', 'cyan']
     
     function getRandomTheme(){
         let i = Math.floor(Math.random() * themes.length)
@@ -24,14 +26,15 @@ export default function ThemeProvider({ children }){
     const [theme, setTheme ] = useState(getRandomTheme())
 
     function updateTheme(){
-        let r = getRandomTheme()
-        setTheme(p => r)
+        setTheme(getRandomTheme())
     }
 
     return (
         <ThemeContext.Provider value={theme}>
             <updateThemeContext.Provider value={updateTheme}>
-                { children }
+                <div className={`${theme} general-container`}>
+                    { children }
+                </div>
             </updateThemeContext.Provider>
         </ThemeContext.Provider>
     )
