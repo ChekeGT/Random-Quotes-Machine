@@ -1,19 +1,29 @@
+
+@keyframes animate 
+    0%
+        opacity: 0
+    100% 
+        opacity: 1    
+
 #quote-box
     width: 100%
     max-width: 550px
     display: flex
     flex-direction: column
     font-family: 'Raleway', sans-serif
+    padding: 2rem
     gap: 1rem
     background-color: #fff
     #author
         align-self: flex-end
+        animation: animate 1s
         &::before
             content:  "-"
             margin-right: 1rem
     #text
         font-size: 1.5rem
         text-align: justify
+        animation: animate 1s
     .social-media-and-button-container
         display: flex
         justify-content: space-between
@@ -28,6 +38,7 @@
                 justify-content: center
                 align-items: center
                 font-size: 1.5rem
+                color: #fff
         #new-quote
             padding: 1rem
             height: 38px
